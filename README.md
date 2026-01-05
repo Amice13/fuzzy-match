@@ -81,7 +81,7 @@ matcher.search('Неіснуюча область')
 // null
 
 const dynamicMatcher = createSearchInstance()
-createSearchInstance.search('тринадцять', ['Мені', 'тринадцятий', 'минало', 'Я', 'пас', 'ягнята', 'за', 'селом'])
+dynamicMatcher.search('тринадцять', ['Мені', 'тринадцятий', 'минало', 'Я', 'пас', 'ягнята', 'за', 'селом'])
 // ['тринадцятий']
 
 ```
