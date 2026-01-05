@@ -1,5 +1,5 @@
 {
-  "name": "fuzzy-match",
+  "name": "@amice13/fuzzy-match",
   "version": "1.0.0",
   "description": "A high‑performance fuzzy string matching library written in TypeScript",
   "main": "./lib/bundle",

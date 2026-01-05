@@ -51,7 +51,7 @@ This hybrid approach combines **speed** and **accuracy** without maintaining a g
 ## Installation
 
 ```bash
-npm install fuzzy-match
+npm install @amice13/fuzzy-match
 ```
 
 ---
@@ -59,7 +59,7 @@ npm install fuzzy-match
 ## Basic Usage
 
 ```ts
-import createSearchInstance from 'fuzzy-match'
+import createSearchInstance from '@amice13/fuzzy-match'
 
 const matcher = createSearchInstance({
   mode: 'static',
