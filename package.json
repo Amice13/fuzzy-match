@@ -22,7 +22,6 @@
     "lint": "eslint . --ext .ts",
     "test": "node tests/index.ts"
   },
-  "keywords": [],
   "author": {
     "name": "Kyrylo Zakharov"
   },
