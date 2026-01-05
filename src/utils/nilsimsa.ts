@@ -43,11 +43,14 @@ export const POPC: Uint8Array = (() => {
 const CODE_BUFFER = new Uint8Array(32)
 const ACC_BUFFER = new Uint32Array(256)
 
-export function createNilsimsa(data: string): Nilsimsa {
+export function createNilsimsa (data: string): Nilsimsa {
   const buffer = new TextEncoder().encode(data)
   ACC_BUFFER.fill(0)
 
-  let lastch0 = -1, lastch1 = -1, lastch2 = -1, lastch3 = -1
+  let lastch0 = -1
+  let lastch1 = -1
+  let lastch2 = -1
+  let lastch3 = -1
   const count = buffer.length
 
   const tran3 = (a: number, b: number, c: number, n: number): number =>
@@ -93,13 +96,13 @@ export function createNilsimsa(data: string): Nilsimsa {
   return { digest, digestRaw }
 }
 
-export function compareRaw(buf1: Uint8Array, buf2: Uint8Array): number {
+export function compareRaw (buf1: Uint8Array, buf2: Uint8Array): number {
   if (buf1.length !== 32 || buf2.length !== 32) throw new RangeError('Invalid Nilsimsa buffers')
   let diff = 0
   for (let i = 0; i < 32; i++) diff += POPC[buf1[i] ^ buf2[i]]
   return 128 - diff
 }
 
-export function compare(hash1: string, hash2: string): number {
+export function compare (hash1: string, hash2: string): number {
   return compareRaw(fromHex(hash1), fromHex(hash2))
 }

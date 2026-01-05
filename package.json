@@ -1,20 +1,48 @@
 {
   "name": "fuzzy-match",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "A high‑performance fuzzy string matching library written in TypeScript",
+  "main": "./lib/bundle",
+  "files": [
+    "lib"
+  ],
   "ts-standard": {
-    "project": "./tsconfig.json"
+    "project": "./tsconfig.json",
+    "ignore": [
+      "becnhmark",
+      "dist",
+      "lib"
+    ]
   },
   "scripts": {
-    "ts-standard": "ts-standard",
+    "ts-standard": "ts-standard src",
+    "build": "npx esbuild src/index.ts --bundle --outfile=lib/bundle.js --platform=neutral --target=es2020 --minify",
+    "build-tsc": "tsc --project tsconfig.json",
+    "benchmark": "node --expose-gc benchmark/index.ts",
     "lint": "eslint . --ext .ts",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node tests/index.ts"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": {
+    "name": "Kyrylo Zakharov"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Amice13/fuzzy-match"
+  },
+  "bugs": {
+    "url": "https://github.com/Amice13/fuzzy-match/issues"
+  },
+  "readme": "",
+  "readmeFilename": "README.md",
   "type": "module",
+  "keywords": [
+    "fuzzy match",
+    "fuzzy",
+    "strings",
+    "strings comparison"
+  ],
   "devDependencies": {
     "@eslint/js": "^9.39.2",
     "@types/node": "^25.0.3",

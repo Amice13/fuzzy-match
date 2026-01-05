@@ -3,13 +3,14 @@
     "module": "NodeNext",
     "moduleResolution": "NodeNext",
     "allowImportingTsExtensions": true,
+    "noEmit": true,
     "esModuleInterop": true,
     "target": "ES2022",
-    "moduleResolution": "node",
     "sourceMap": true,
     "strict": true,
     "outDir": "dist",
     "lib": ["es2020"],
     "types": ["node"]
-  }
+  },
+  "include": ["src"]
 }
