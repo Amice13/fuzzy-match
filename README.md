@@ -1,4 +1,4 @@
-# Fuzzy-Match
+# Fuzzy String Match
 
 A **high‑performance fuzzy string matching library** written in TypeScript.
 
@@ -51,7 +51,7 @@ This hybrid approach combines **speed** and **accuracy** without maintaining a g
 ## Installation
 
 ```bash
-npm install @amice13/fuzzy-match
+npm install @amice13/fuzzy-string-match
 ```
 
 ---
@@ -59,7 +59,7 @@ npm install @amice13/fuzzy-match
 ## Basic Usage
 
 ```ts
-import createSearchInstance from '@amice13/fuzzy-match'
+import createSearchInstance from 'fuzzy-string-match'
 
 const matcher = createSearchInstance({
   mode: 'static',
