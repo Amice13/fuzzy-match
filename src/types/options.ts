@@ -8,7 +8,6 @@ export interface Options {
   removeDiacritics: boolean
   normalizeWhitespace: boolean
   disableNormalization: boolean
-  sort: boolean
   stringLengthTolerance: number
   hashMinTolerance: number
   hashBaseTolerance: number

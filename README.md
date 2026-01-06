@@ -165,6 +165,15 @@ const anotherInstance = createSearchInstance(savedOptions)
 
 Check `./benchmark folder`
 
+### Environment
+
+* Date: 2026-01
+* OS Name: Ubuntu-22.04
+* Processor: 12th Gen Intel(R) Core(TM) i7-12700H, 2300 Mhz, 14 Core(s), 20 Logical Processor(s)
+* Installed RAM: 32.0 GB
+* System type 64-bit operating system, x64-based processor
+* Node: v24.1.0
+
 ### Results
 
 ```
@@ -182,7 +191,7 @@ Check `./benchmark folder`
 └────────────────┴───────────┘
 ```
 
-### Interpretation
+#### Interpretation
 
 - **High recall** (94.1% true positives)
 - **Minimal retained memory**
