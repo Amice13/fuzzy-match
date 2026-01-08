@@ -9,7 +9,6 @@ const defaultOptions: Options = {
   removeDiacritics: true,
   normalizeWhitespace: true,
   disableNormalization: false,
-  sort: false,
   stringLengthTolerance: 0.2,
   hashMinTolerance: 4,
   hashBaseTolerance: 16,

@@ -10,7 +10,8 @@
     "strict": true,
     "outDir": "dist",
     "lib": ["es2020"],
-    "types": ["node"]
+    "types": ["node"],
+    "rootDir": "src"
   },
-  "include": ["src"]
+  "include": ["src", "src/types"]
 }

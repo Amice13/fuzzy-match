@@ -10,7 +10,7 @@ global.gc()
 const heapBaseline = process.memoryUsage().heapUsed
 
 const tInit0 = performance.now()
-const { default: createSearchInstance } = await import('../lib/bundle.js')
+const { default: createSearchInstance } = await import('../dist/index.mjs')
 const { search } = createSearchInstance({ mode: 'static', data })
 const tInit1 = performance.now()
 

@@ -200,6 +200,10 @@ Check `./benchmark folder`
 
 ---
 
+## Code style
+
+The code is written with [JavaScript Standard Style](https://standardjs.com/).
+
 ## License
 
 MIT

@@ -144,7 +144,7 @@ const createSearchInstance = (initialOptions: Partial<Options>): Instance => {
     if (typeof string !== 'string') throw Error('Source is not a string')
     if (arr?.includes(string) === true) return [string]
     const bucket = bucketOf(string.length)
-    if (dataHashCache.get(bucket)?.has(string) === true) return [string]
+    if (arr === undefined && dataHashCache.get(bucket)?.has(string) === true) return [string]
     let candidates = arr ?? []
     if (string.length > 3) {
       candidates = getSimilarByHash(string, arr)

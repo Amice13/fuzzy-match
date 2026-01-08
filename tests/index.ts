@@ -24,7 +24,6 @@ describe('Fuzzy match - Ukrainian regions', () => {
     removeDiacritics: true,
     normalizeWhitespace: true,
     disableNormalization: false,
-    sort: false,
     stringLengthTolerance: 0.2,
     hashMinTolerance: 20,
     hashBaseTolerance: 50,

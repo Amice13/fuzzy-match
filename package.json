@@ -1,25 +1,31 @@
 {
   "name": "quick-fuzzy",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A high‑performance fuzzy string matching library written in TypeScript",
-  "main": "./lib/bundle.js",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs"
+    }
+  },
   "files": [
-    "lib"
+    "dist"
   ],
   "ts-standard": {
     "project": "./tsconfig.json",
     "ignore": [
       "becnhmark",
-      "dist",
-      "lib"
+      "dist"
     ]
   },
   "scripts": {
+    "build": "tsup",
     "ts-standard": "ts-standard src",
-    "build": "npx esbuild src/index.ts --bundle --outfile=lib/bundle.js --platform=neutral --target=es2020 --minify",
-    "build-tsc": "tsc --project tsconfig.json",
     "benchmark": "node --expose-gc benchmark/index.ts",
-    "lint": "eslint . --ext .ts",
     "test": "node tests/index.ts"
   },
   "author": {
@@ -49,6 +55,7 @@
     "globals": "^17.0.0",
     "jiti": "^2.6.1",
     "ts-standard": "^12.0.2",
+    "tsup": "^8.5.1",
     "typescript-eslint": "^8.51.0"
   }
 }
